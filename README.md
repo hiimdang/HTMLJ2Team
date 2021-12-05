@@ -36,13 +36,13 @@
                                 <br>
                                 <font color="#E8527C">
                                     <img src="https://raw.githubusercontent.com/BlackKaako/HTMLJ2Team/main/buoi3/bai1/fb.png">
-                                    Follow me on <a href="https://www.facebook.com/tuilaDang.uwu/">Facebook</a>
+                                    Follow me on <a href="https://www.facebook.com/tuilaDang.uwu/" target="_blank">Facebook</a>
                                     <br>
                                     <img src="https://raw.githubusercontent.com/BlackKaako/HTMLJ2Team/main/buoi3/bai1/mail.png">
                                     You can reach me at <a href="mailto:haidanglogicalwitch@gmail.com">haidanglogicalwitch@gmail.com</a>
                                     <br>
                                     <img src="https://raw.githubusercontent.com/BlackKaako/HTMLJ2Team/main/buoi3/bai1/tweet.png">
-                                    And I sometimes <a href="https://twitter.com/HiImDang_uwu">Tweet</a>
+                                    And I sometimes <a href="https://twitter.com/HiImDang_uwu" target="_blank">Tweet</a>
                                 </font>
 
 
