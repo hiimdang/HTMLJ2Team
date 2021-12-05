@@ -18,7 +18,7 @@
                             <div align="center">
                             <b>
                                Hi I'm BlackKaako ~
-                               <hr color="00f7de">
+                               <hr color="#00f7de">
                             </b>
                             </div>
                             <font size="+3" color="#01037c">
@@ -30,7 +30,7 @@
                                Buổi 2:
                                <a href="https://blackkaako.github.io/HTMLJ2Team/buoi2/bai1/bai1" alt="Den buoi 2 bai 1" target="_blank"> Bài 1 </a>
                             </font>
-                            <hr color="00f7de">
+                            <hr color="#00f7de">
                             <font size="+1" color="#01005d">
                                 Contact:
                                 <br>
