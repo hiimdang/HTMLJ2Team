@@ -8,7 +8,7 @@
 <body>
     <table width="100%">
         <tr> 
-            <td bgcolor="#010044" width="20%"></td>
+            <td bgcolor="#010044" width="15%"></td>
             <td bgcolor="#00f7de" width="5%"> </td>
             <td>
                 <font>
@@ -39,7 +39,7 @@
                                     Follow me on <a href="https://www.facebook.com/tuilaDang.uwu/" target="_blank">Facebook</a>
                                     <br>
                                     <img src="https://raw.githubusercontent.com/BlackKaako/HTMLJ2Team/main/buoi3/bai1/mail.png">
-                                    You can reach me at <a href="mailto:haidanglogicalwitch@gmail.com">haidanglogicalwitch@gmail.com</a>
+                                    You can mail to me at<a href="mailto:haidanglogicalwitch@gmail.com"> haidanglogicalwitch@gmail.com</a>
                                     <br>
                                     <img src="https://raw.githubusercontent.com/BlackKaako/HTMLJ2Team/main/buoi3/bai1/tweet.png">
                                     And I sometimes <a href="https://twitter.com/HiImDang_uwu" target="_blank">Tweet</a>
@@ -53,7 +53,7 @@
 
             </td>
             <td bgcolor="#00f7de" width="5%"> </td>
-            <td bgcolor="#010044" width="20%"></td>
+            <td bgcolor="#010044" width="15%"></td>
         </tr>
     </table>
 </body>
