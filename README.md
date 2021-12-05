@@ -39,7 +39,7 @@
                                     Follow me on <a href="https://www.facebook.com/tuilaDang.uwu/" target="_blank">Facebook</a>
                                     <br>
                                     <img src="https://raw.githubusercontent.com/BlackKaako/HTMLJ2Team/main/buoi3/bai1/mail.png">
-                                    You can mail me at<a href="mailto:haidanglogicalwitch@gmail.com"> haidanglogicalwitch@gmail.com</a>
+                                    Mail me at<a href="mailto:haidanglogicalwitch@gmail.com"> haidanglogicalwitch@gmail.com</a>
                                     <br>
                                     <img src="https://raw.githubusercontent.com/BlackKaako/HTMLJ2Team/main/buoi3/bai1/tweet.png">
                                     And I sometimes <a href="https://twitter.com/HiImDang_uwu" target="_blank">Tweet</a>
