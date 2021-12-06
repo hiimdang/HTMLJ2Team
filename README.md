@@ -29,6 +29,11 @@
                                <br>
                                Buổi 2:
                                <a href="https://blackkaako.github.io/HTMLJ2Team/buoi2/bai1/bai1" alt="Den buoi 2 bai 1" target="_blank"> Bài 1 </a>
+                               <br>
+                                Buổi 3:
+                                <a href="https://blackkaako.github.io/HTMLJ2Team/buoi3/bai1/bai1" alt="Den buoi 3 bai 1" target="_blank"> Bài 1 </a>
+                                Buổi 4:
+                                <a href="https://blackkaako.github.io/HTMLJ2Team/buoi4/bai1/bai1" alt="Den buoi 4 bai 1" target="_blank"> Bài 1 </a>
                             </font>
                             <hr color="#00f7de">
                             <font size="+1" color="#01005d">
