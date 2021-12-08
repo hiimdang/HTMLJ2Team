@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackKaako</title>
+</head>
+<style>
+    #div_tong{
+        width: 100%;
+        height: 800px;
+        /* background-color: pink; */
+    }
+    /* Div tren */
+    #div_tong > .tren{
+        width: 100%;
+        height: 10%;
+        /* background-color: blue; */
+    }
+    #div_tong > .tren > .trai{
+        width: 20%;
+        height: 100%;
+        /* background-color: yellow; */
+        float: left;
+        position: relative;
+    }
+    #div_tong > .tren > .phai{
+        width: 80%;
+        height: 100%;
+        /* background-color: orange; */
+        float: left;
+        position: relative;
+    }
+
+    /* Div duoi */
+    #div_tong > .duoi{
+        width: 100%;
+        height: 90%;
+        /* background-color: red; */
+        position: relative;
+        float: left;
+    }
+    #div_tong > .duoi > .trai{
+        width: 20%;
+        height: 100%;
+        background-color: #9ccc9c;
+        border-right: 5px solid green;
+        position: relative;
+        float: left;
+    }
+    #div_tong > .duoi > .phai{
+        width: 77%;
+        height: 100%;
+        /* background-color: pink; */
+        position: relative;
+        /* border-right: 4px solid green; */
+        float: left;
+    }
+    #div_tong > .duoi > .phai > .trai{
+        width: 10%;
+        height: 100%;
+        background-color: whitesmoke;
+        position: relative;
+        float: left;
+    }
+    #div_tong > .duoi > .phai > .giua{
+        width: 70%;
+        height: 100%;
+        /* background-color: blue; */
+        position: relative;
+        float: left;
+    }
+    #div_tong > .duoi > .phai > .phai{
+        width: 20%;
+        height: 100%;
+        /* background-color: blue; */
+        position: relative;
+        float: left;
+    }
+    #div_tong > .duoi > .phai > .phai >.tren{
+        width: 100%;
+        height: 20%;
+        /* background-color: red; */
+        position: relative;
+        float: left;
+    }
+    #div_tong > .duoi > .phai > .phai >.duoi{
+        width: 100%;
+        height: 80%;
+        /* background-color: pink; */
+        position: relative;
+        float: left;
+    }
+
+    /* Text  */
+    .tieu_de{
+        font-weight: bold;
+        font-size: 35px;
+        text-align: left;
+    }
+    .chu_thuong{
+        /* font-weight: bold; */
+        font-size: 15px;
+        text-align: left;
+    }
+    .can_giua{
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <div id="div_tong">
+        <div class="tren">
+            <!-- <div class="trai"> -->
+            <div class="trai" style="border-bottom: 7px solid green; top: -10px;">
+                <img src="images/logo.gif" style="height: 110%;position: absolute; bottom:-30px; z-index: 99;">
+            </div>
+
+            <div class="phai" style="top: -10px; border-bottom: 7px solid green;">
+                <select style="position: absolute; right: 40px; top: 10px;">
+                    <option>Hội hoa Lan & Cây cảnh TPHCM</option>
+                    <option>Hội hoa Lan & Cây cảnh HN</option>
+                </select>
+                <button style="position: absolute; right:0; top: 10px;" type="submit">OK</button>
+               
+               <a href="https://lasc.vn/cay-hoa-canh-de-trong/" target="_blank">
+                <img src="images/n_hoavacc.gif" style="position: absolute; right: 270px; bottom: 5px; border-right: 2px solid black;">
+               </a> 
+
+                <a href="https://dantri.com.vn" target="_blank">
+                    <img src="images/n_ttuc.gif" style="position: absolute; right: 200px; bottom: 5px;">
+                </a>
+                <a href="https://gmail.com" target="_blank">
+                    <img src="images/n_hopthu.gif" style="position: absolute; right: 118px; bottom: 5px;border-left: 2px solid black;">
+                </a>
+                <a href="https://youtube.com" target="_blank">
+                    <img src="images/n_hvien.gif" style="position: absolute; right: 5px; bottom: 5px;border-left: 2px solid black;">
+                </a>  
+
+            </div>
+        </div>
+
+        <div class="duoi">
+            <div class="trai">
+                <img src="images/tintuc_bientrai.gif" style="position: absolute; left: 0px; width: 70%;">
+                <img src="images/Hoavang.gif" style="position: absolute;bottom: 50%; left: -30px;  z-index: 90;">
+            </div>
+            <div class="phai">
+                <div class="trai">
+                    <img src="images/mau.jpg" style="left: 0px; top: 0px;">
+                    <img src="images/buom1.gif" style="position: fixed; left: 18%; top: 55%; z-index: 99;">
+                </div>
+                <div class="giua" style="position: relative;">
+                    <div class="tieu_de">Muôn hoa đua sắc</div>
+                       <div class="chu_thuong" style="margin-top: 30px;"> 
+                        <table>
+                            <tr>
+                              <td>
+                                Đã là hoa thì hoa nào cũng đẹp. Kể từ những đoá hoa dân dã giản dị bình thường. Hoa sim, hoa mua tím biếc sườn đồi. Hoa cà tím biếc vườn quê. Hoa lục bình tím biếc trên dòng sông. Hoa súng tím biếc ao làng. Hoa xoan tím biếc những chiều xóm vắng…. Hoa gạo đỏ đầu làng, hoa phượng đỏ trời góc phố. Hoa mào gà, hoa dong riềng đỏ góc vườn ai. Hoa cau, hoa dừa trắng phau lưng trời. Những loài hoa dân giả muôn màu muôn sắc cũng đẹp huống chi là các loài hoa quý phái.
+                              </td>
+                              <td>
+                              </td>
+                            <tr>
+                                <td>Một trong những loài hoa quý phái là hoa lan. "Vua thưởng lan, quan thưởng trà". Cái hương lan - " cái hương thuỷ quái gì mà mê đắm lòng người đến thế". Phong lan thơm sực nức, nồng nàn, gần gũi. Địa lan thanh cao, nhẹ nhõm, lúc thắm thiết, sực nức, lúc nhạt nhoà xa xăm. Đoá bạch ngọc khi nở có màu sáng như chiếc hài của thần vệ nữ tự ngày xưa.</td>
+                            </tr>
+                            <tr>
+                                <td>Hoa mai có nhiều loài. Từ ngũ đài hoa - năm cánh vàng rực rỡ đến hoàng tỉ trên 30 cánh. Hoa mai đẹp từ gốc đến cành, sống lâu bền, xếp vào hàng cổ thụ "lão mai độc thọ nhất chi vinh" (thơ cổ). Hoa mai không phô sắc hương mà khiêm tốn dịu dàng, tượng trưng cho cốt cách của người quân tử, chịu được cái giá rét của mùa đông để nở vào một sớm xuân hồng.</td>
+                            </tr>
+                            <tr>
+                                <td>Hoa cúc vàng trong hàng tứ quý " tùng, cúc, trúc, mai" tượng trưng cho mặt trời, cho quyền lực. Cúc đại đoá bông to, cành cong lộng lẫy sang trọng, cúc vạn thọ giản dị, bền lâu. Hoa cúc là loại "diệp bất li chi, hoa vô lạc địa", lá cúc không bao giờ rời khỏi cành dẫu đã héo khô, hoa tàn cánh không rụng như người quân tử không xa rời lý tưởng. </td>
+                            </tr>
+                            <tr>
+                                <td>Loài hao mang biểu tượng của mùa xuân là hoa đào. Những cánh hoa đào rưng rưng khoe sắc, màu hồng phơn phớt hay hồng đậm xen trong lá non như vẻ e ấp ngại ngùng như người thiếu nữ. Hoa đào như muôn cánh bướm hồng rung rinh trong gió, khoe sắc trong nắng xuân. </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Ta xin một đời hết lòng chăm chỉ trồng thật nhiều hoa, nâng niu hoa để đổi lấy những nụ cười thân thương ấy.
+                                </td>
+                            </tr>
+                        </table>
+                       </div>
+                </div>
+                <div class="phai">
+                    <div class="tren">
+                        <img src="images/thamgia.gif">
+                        <div class="chu_thuong can_giua">Họ tên </div>
+                        <input style="width: 150px;">
+                        <div class="chu_thuong can_giua">Mã số </div>
+                        <input style="width: 150px;">
+                        <img src="images/ok.gif" style="position: absolute; left: 25%; top: 78%;">
+                    </div>
+                    <br>
+                    
+                    <div class="duoi" style="background-image: url(images/h2.jpg); background-repeat: no-repeat;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
