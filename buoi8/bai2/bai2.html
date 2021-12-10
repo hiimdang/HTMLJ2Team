@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    
+    /* Text */
+    .tieu_de{
+        font-size: 20px;
+        color: midnightblue;
+    }
+    .td_pink{
+        background-color: pink;
+    }
+    .can_giua{
+        text-align: center;
+    }
+    /* table{
+        border: 2px solid black;
+    } */
+   
+</style>
+<body>
+    <table style="width: 300px;">
+            <tr>
+                <td colspan="2" bgcolor="tomato">
+                    <div class="tieu_de can_giua">
+                        TÍNH NGÀY TRONG THÁNG
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+                
+                <td class="td_pink">
+                    <div class="can_giua" style="float: left; width: 100%;">Tháng / Năm: </div> 
+                </td>
+                <td class="td_pink" >
+                    <div style="width: 100% ; position: relative; left: 10%;" >
+                        <input id="input_thang" type="number" style=" width: 60px;">
+                        /
+                        <input id="input_nam" type="number" style="width: 50px;">
+                    </div>
+                    <div>
+                        <button type="button" style="position: relative; left: 20%;" onclick="in_ra()">Tính số ngày</button>
+                    </div>
+                </td>
+                <tr>
+                    <td class="td_pink" colspan="2" style="height: 30px; width: 100%;">
+                        <div id="ket_qua" style="position: relative; background: yellowgreen;width: 100%; text-align: center; color: tomato;">
+                            
+                        </div>
+                    </td>
+                </tr>
+
+            </tr>
+       
+    </table>
+
+    <script>
+
+        function in_ra(){
+            let ngay
+            let thang =  Number(document.getElementById("input_thang").value) ;
+            let nam = Number(document.getElementById("input_nam").value)
+            if (1<= thang && thang <=12){
+               switch(thang){
+                   case 1:
+                   case 3:
+                   case 5:
+                   case 7:
+                   case 8:
+                   case 10:
+                   case 12:
+                       ngay = 31;
+                       break;
+                   case 4:
+                   case 6:
+                   case 9:
+                   case 11:
+                      ngay = 30;
+                      break;
+                   case 2:
+                       if (nam % 400 == 0 || ( nam%4==0 && nam % 100 !=0)){
+                        ngay = 29;
+                        break;
+                       } else{
+                        ngay = 28;
+                        break;
+                       }
+               }
+               document.getElementById("ket_qua").innerHTML = "Số ngày của tháng " + thang + " năm " + nam + " là: " + ngay;
+            } else{
+                alert("Vui lòng nhập số tháng hợp lệ!")
+            }
+        }
+    </script>
+</body>
+</html>

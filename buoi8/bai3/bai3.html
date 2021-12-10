@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nam am lich</title>
+</head>
+<style>
+        #div_tong{
+            width: 40%;
+            height: 100px;
+        }
+        #div_tong > .div_tren{
+            width: 100%;
+            height: 30%;
+            background-color: midnightblue;
+        }
+        #div_tong > .div_duoi{
+            width: 100%;
+            height: 70%;
+            background-color: skyblue;
+        }
+
+        /* text */
+        .can_giua{
+            text-align: center;
+        }
+        .tieu_de{
+            font-size: large;
+            color: whitesmoke;
+        }
+        .chu_thuong{
+            font-size: medium;
+            color: blue;
+        }
+        .in_dam{
+            font-weight: bold;
+        }
+        .label{
+            position: relative;
+        }
+</style>
+<body>
+    <div id="div_tong">
+        <div class="div_tren">
+            <div class="tieu_de can_giua in_dam" style="position: relative; top: 4px;"> 
+                TÍNH NĂM ÂM LỊCH
+            </div>
+        </div>
+        <div class="div_duoi">
+            <div class="chu_thuong label" style="width: 30%; left: 10px;">
+                Năm dương lịch
+            </div>
+            <div style="position: absolute; top:60px; left: 22px;">
+                <input id = "input_nam" type="number" style="width:100px;">
+                <button style="position: relative; left: 50px; color: tomato;" type="button" onclick="in_ra()">=></button>
+                
+                <div id="ket_qua" style="position: relative; background-color: tomato; left: 220px; top: -18px;" class="can_giua"> </div>
+            </div>
+            <div class="chu_thuong label" style="position: relative; width: 30%; left: 240px; top: -18px; ">Năm âm lịch</div>
+        </div>
+    </div>
+
+    <script>
+            function in_ra(){
+            let nam = Number(document.getElementById("input_nam").value);
+            let can = (nam-3) % 10;
+            let chi = (nam-3) % 12;
+            let dau;
+            let cuoi;
+            switch(can){
+                case 0: 
+                    dau="Quý";
+                    break;
+                case 1:
+                     dau="Giáp";
+                     break;
+                case 2: 
+                    dau="Ất";
+                    break;
+                case 3: 
+                    dau="Bính";
+                    break;
+                case 4: 
+                    dau="Đinh";
+                    break;
+                case 5: 
+                    dau="Mậu";
+                    break;
+                case 6: 
+                    dau="Kỷ";
+                    break;
+                case 7: 
+                    dau="Canh";
+                    break;
+                case 8: 
+                    dau="Tân";
+                    break;
+                case 9: 
+                    dau="Nhâm";
+                    break;
+            }
+            
+            switch(chi){
+                case 0: 
+                    cuoi="Hợi";
+                    break;
+                case 1:
+                     cuoi="Tý";
+                     break;
+                case 2: 
+                    cuoi="Sửu";
+                    break;
+                case 3: 
+                    cuoi="Dần";
+                    break;
+                case 4: 
+                    cuoi="Mão";
+                    break;
+                case 5: 
+                    cuoi="Thìn";
+                    break;
+                case 6: 
+                    cuoi="Tỵ";
+                    break;
+                case 7: 
+                    cuoi="Ngọ";
+                    break;
+                case 8: 
+                    cuoi="Mùi";
+                    break;
+                case 9: 
+                    cuoi="Thân";
+                    break;  
+                case 10: 
+                    cuoi="Dậu";
+                    break;  
+                case 11: 
+                    cuoi="Tuất";
+                    break;  
+            }
+            
+            document.getElementById("ket_qua").innerHTML = dau + " " + cuoi;
+        }
+    </script>
+</body>
+</html>
