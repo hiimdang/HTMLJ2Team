@@ -19,7 +19,7 @@
     }
 
     #div_tong{
-        background-color: #ffffffaf;;
+        background-color: #ffffffaf;
         width: 500px;
         border-radius: 7px;
         backdrop-filter: blur(30px);
@@ -125,23 +125,23 @@
                if (so % 2 == 0){
                     chan = true;
                     if (so == 2){
-                        nguyen_to=true;
                     }
                } else if (so % 2 == 1 ){
                     chan = false;
-                    if (so > 4){
-                        for (i=2; i <= parseInt(Math.sqrt(so)); i= i+1){
-                        if (so % i == 0){
-                            break;
-                        }
-                        nguyen_to = true;
-                     }
-                    }
-                    if (so == 2 || so == 3){
-                        nguyen_to = true;
-                    }
-
                }
+
+               if (so == 2 || so == 3){
+                nguyen_to = true;
+            } else if(so > 2){
+                for(i=2 ; i<= so ; i++){
+                    if(so % i == 0){
+                        break;
+                    }
+                    if (i == so-1){
+                       nguyen_to = true;
+                    }
+                }
+            }
 
                 let chuoi = "";
                 if (chan == true){
@@ -152,7 +152,7 @@
 
                 if (nguyen_to == true){
                     chuoi = chuoi + "là số nguyên tố."
-                } else{
+                } else if (nguyen_to == false){
                     chuoi = chuoi + "không phải là số nguyên tố."
                 }
                 
