@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mang_1</title>
+</head>
+<style>
+    body{
+        background-image: url("https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        
+    }
+
+    #tong {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .main{
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #b4a7d6;
+        width: 450px;
+        border-radius: 7px;
+        backdrop-filter: blur(30px);
+        
+    }
+
+    .than{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 7px;
+        margin: 10px;
+    }
+
+    input[type="number"]{
+        width: 300px;
+        margin-top: 5px;
+        padding: 2px;
+        border-radius: 7px;
+        border: 1px;
+        border-color: #ffb3cf;
+        background-color: #ffb3cf;
+    }
+
+    input[type = "button"]{
+        margin-top: 5px;
+        padding: 2px;
+        border-radius: 7px;
+        border: 1px;
+        background-color: #b0e0e6;
+    }
+
+    #mang_output,#tong_so,#chan,#le,#lon_nhat{
+        background-color: #faebd7;
+        /* border-radius: 0px 0px 7px 7px; */
+        padding: 3px;
+        margin-top: 0px;
+    }
+    #nguyen_to{
+        background-color: #faebd7;
+        border-radius: 0px 0px 7px 7px;
+        padding: 3px;
+        margin-top: 0px; 
+    }
+
+</style>
+<body>
+        <div id = "tong">
+            <div class="main">
+                <div class="than">
+                    <input type="number" id = "input_so" placeholder="Nhập phần tử (số) của mảng" autofocus >
+                    <input type="button" value="Thêm số vào mảng" onclick="them_so()">
+                </div>
+                <div id = "mang_output"> Mảng:</div>
+                <div id = "tong_so"> Tổng:</div>
+                <div id = "lon_nhat">Lớn nhất: </div>
+                <div id = "chan">Chẵn: </div>
+                <div id = "le">Lẻ: </div>
+                <div id = "nguyen_to">Nguyên tố: </div>
+            </div>
+        </div>
+
+        <script>
+          var mang = [];
+
+            function them_so(){
+                var so = parseFloat(document.getElementById("input_so").value);
+                if (isNaN(so)) {
+                    alert("Nhập số thay vì khoảng trắng đi nào :')")
+                } else {
+                    mang.push(so);
+                    document.getElementById('input_so').value = '';
+                    in_mang();
+                    tinh_tong();
+                    tinh_chanle();
+                    tinh_nguyento();
+                }
+
+            }
+            function in_mang(){
+                var chuoi = 'Mảng: ';
+		for(let i = 0; i < mang.length; i++){
+			chuoi += mang[i] + ' ';
+		}
+        document.getElementById('mang_output').innerHTML = chuoi;
+		
+            }
+
+            function tinh_tong(){
+                var sum = 0;
+                var max = mang[0];
+                var min = mang[0];
+               for (i=0 ; i < (mang.length) ; i++){
+                //    Sum
+                sum = sum + mang[i] ;   
+
+                //    Max
+                if (max < mang[i]){
+                    max = mang[i];
+                }
+               }
+                    // Sum
+               document.getElementById("tong_so").innerHTML = "Tổng: "
+               document.getElementById("tong_so").innerHTML += sum;
+                    // Max
+               document.getElementById("lon_nhat").innerHTML = "Lớn nhất: "
+               document.getElementById("lon_nhat").innerHTML += max;
+            }
+
+            function tinh_chanle(){
+                var chuoi_chan = "Chẵn: ";
+                var chuoi_le = "Lẻ: ";
+                for (i = 0 ; i < (mang.length) ; i++){
+                    if (mang[i] % 2 == 0){
+                        chuoi_chan = chuoi_chan + mang[i] + " "; 
+                    } else if (mang[i] % 2 == 1){
+                        chuoi_le = chuoi_le + mang[i] + " "; 
+                    }
+                }
+                        // Chan
+               document.getElementById("chan").innerHTML = chuoi_chan;
+                        // Le
+               document.getElementById("le").innerHTML = chuoi_le;
+            }
+            
+            function tinh_nguyento(){
+                var chuoi_nguyento = "Nguyên tố: "
+            for(i = 0; i < mang.length ; i++){
+            
+                if ((mang[i] == 2) || (mang[i] == 3)){
+                    chuoi_nguyento += mang[i] + " "
+                    document.getElementById("nguyen_to").innerHTML = ""
+                    document.getElementById("nguyen_to").innerHTML += chuoi_nguyento;
+                } else if(mang[i] > 3){
+                    for(j=2 ; j<= mang[i] ; j++){
+                        if(mang[i] % j == 0){
+                        break;
+                    }
+                    if (j == mang[i]-1){
+                        chuoi_nguyento += mang[i] + " "
+                    document.getElementById("nguyen_to").innerHTML = ""
+                    document.getElementById("nguyen_to").innerHTML += chuoi_nguyento;
+                       break;
+                    }
+                    
+                  }
+                }
+
+            }
+
+            
+                   
+            }
+        </script>
+</body>
+</html>
