@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mang_1</title>
+</head>
+<style>
+    body{
+        background-image: url("https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        
+    }
+
+    #tong {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .main{
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #b4a7d6;
+        width: 450px;
+        border-radius: 7px;
+        backdrop-filter: blur(30px);
+        
+    }
+
+    .than{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 7px;
+        margin: 10px;
+    }
+
+    input[type="number"]{
+        width: 250px;
+        margin-top: 5px;
+        padding: 2px;
+        border-radius: 7px;
+        border: 1px;
+        border-color: #ffb3cf;
+        background-color: #ffb3cf;
+    }
+
+    input[type = "button"]{
+        margin-top: 5px;
+        padding: 2px;
+        border-radius: 7px;
+        border: 1px;
+        background-color: #b0e0e6;
+    }
+
+    #mang_output,#lon_nhat,#nho_nhat{
+        background-color: #faebd7;
+        /* border-radius: 0px 0px 7px 7px; */
+        padding: 3px;
+        margin-top: 0px;
+    }
+    #tong_so{
+        background-color: #faebd7;
+        border-radius: 0px 0px 7px 7px;
+        padding: 3px;
+        margin-top: 0px; 
+    }
+
+</style>
+<body>
+        <div id = "tong">
+            <div class="main">
+                <div class="than">
+                    <input type="number" id = "input_sophantu" placeholder="Nhập số phần tử của mảng" autofocus >
+                    <input type="button" value="Phát sinh và tính toán" onclick="them_so()">
+                </div>
+                <div id = "mang_output"> Mảng:</div>
+                <div id = "lon_nhat">Lớn nhất: </div>
+                <div id = "nho_nhat">Nhỏ nhất: </div>
+                <div id = "tong_so">Tổng: </div>
+            </div>
+        </div>
+
+        <script>
+          var mang = [];
+          var sophantu;
+            // In ra
+            function them_so(){
+                mang = [];
+                sophantu = parseInt(document.getElementById("input_sophantu").value)
+
+                if (isNaN(sophantu) || sophantu <= 0 ){
+                    alert("Nhập vào số phần tử hợp lý đi nào :') ")
+                } else {
+                    for(i=0; i< sophantu ; i++){
+                    mang[i] = Math.floor(Math.random() * 20);
+                }
+                document.getElementById("input_sophantu").value = ""
+                document.getElementById("mang_output").innerHTML ="Mảng: "
+                document.getElementById("mang_output").innerHTML += mang;
+                tinh_max();
+                tinh_min();
+                tinh_sum();
+                }
+            }
+
+            // Max
+            function tinh_max(){
+                let max = mang[0]
+                for(i=0; i< sophantu ; i++){
+                    if (max < mang[i]){
+                        max = mang[i];
+                    }
+                }
+                document.getElementById("lon_nhat").innerHTML ="Lớn nhất: " + max;
+            }
+            // Min
+            function tinh_min(){
+                let min = mang[0]
+                for(i=0; i< sophantu ; i++){
+                    if (min > mang[i]){
+                        min = mang[i];
+                    }
+                }
+                document.getElementById("nho_nhat").innerHTML ="Nhỏ nhất: " + min;
+            }
+            
+            function tinh_sum(){
+                let sum = 0;
+                for(i=0 ; i < sophantu ; i ++){
+                    sum += mang[i]
+                }
+                document.getElementById("tong_so").innerHTML ="Tổng: " + sum;
+            }
+        </script>
+</body>
+</html>
